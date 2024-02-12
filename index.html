@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        #question-button {
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        
+        button {
             background-color: transparent;
             border: none;
-            cursor: pointer;
             color: black;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            padding: 10px 20px;
             text-decoration: none;
-            font-size: inherit;
-            padding: 0;
-            margin: 0;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: lightgray;
         }
     </style>
-    <title>带有问题链接样式的HTML模板</title>
+    <title>Bitkid-114514的博客</title>
 </head>
 <body>
-    <h1>欢迎来到我的网页</h1>
-    <!-- 问题按钮模拟为文本 -->
-    <button id="question-button">提问</button>
-
-    <!-- 这里可以添加点击按钮后的JavaScript逻辑（例如打开新窗口、显示隐藏内容等） -->
-    <script>
-        document.getElementById('question-button').addEventListener('click', function() {
-            alert('您已点击了按钮！');
-            // 在这里添加您的处理逻辑
-        });
-    </script>
+    <h1>欢迎来到Bitkid-114514</h1>
+    
+    <div class="center-container">
+        <button>主页</button>
+        <button>题目</button>
+        <button>训练</button>
+        <button>比赛</button>
+        <button>评测</button>
+        <button>讨论</button>
+        <button>成员</button>
+        <button>公告</button>
+    </div>
 </body>
 </html>
