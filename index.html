@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bitkid-114514</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #question-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            font-size: inherit;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #question-button:hover {
+            color: red;
+        }
+    </style>
+    <title>带有问题链接样式的HTML模板</title>
 </head>
 <body>
     <h1>欢迎来到Bitkid-114514</h1>
-    <p>这是一个基本的HTML5模板。</p>
-    <button id="question-button">提问按钮</button>
+    <!-- 问题按钮模拟为文本链接 -->
+    <button id="question-button">提问</button>
+    <!-- 这里可以添加点击按钮后的JavaScript逻辑（例如打开新窗口、显示隐藏内容等） -->
     <script>
         document.getElementById('question-button').addEventListener('click', function() {
             alert('您已点击了问题按钮！');
