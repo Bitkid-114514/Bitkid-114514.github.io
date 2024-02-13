@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... -->
+</head>
+<body>
+    <div class="login-container">
+        <!-- ... -->
+        <form id="loginForm" action="/your_login_processing_endpoint" method="POST">
+            <label for="username">用户名：</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="password" required>
+            
+            <!-- 添加记住我复选框 -->
+            <label for="rememberMe">
+                <input type="checkbox" id="rememberMe" name="rememberMe"> 记住我
+            </label>
+            
+            <button type="submit">登录</button>
+        </form>
+        
+        <!-- ... -->
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (document.getElementById('rememberMe').checked) {
+                localStorage.setItem('username', username);
+                // **警告：不建议在本地存储密码明文**
+                // 以下代码仅为示例，请勿在实际项目中存储未加密的密码
+                localStorage.setItem('password', password);
+            } else {
+                localStorage.removeItem('username');
+                localStorage.removeItem('password');
+            }
+            sendLoginRequest(username, password);
+        });
+
+        function sendLoginRequest(username, password) {
+            // 这里编写发送登录请求的逻辑
+        }
+    </script>
+</body>
+</html>
