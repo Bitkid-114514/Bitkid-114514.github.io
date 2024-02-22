@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,6 +40,19 @@
         }
     </style>
     <title>Bitkid-114514的博客</title>
+    <script>
+        function login() {
+            var username = prompt("请输入用户名:");
+            var password = prompt("请输入密码:");
+
+            if (username === "admin" && password === "password") {
+                alert("登录成功！");
+                // 在这里添加登录成功后的逻辑，比如跳转到另一个页面
+            } else {
+                alert("用户名或密码错误，请重试！");
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>欢迎来到Bitkid-114514</h1>
@@ -47,7 +60,7 @@
     <div class="right-top">
         <div style="display: flex; gap: 10px;">
             <!-- 登录按钮 -->
-            <button onclick="window.location.href='login.html'">登录</button>
+            <button onclick="login()">登录</button>
             <!-- 注册按钮，点击后跳转至signup.html -->
             <button>注册</button>
         </div>
